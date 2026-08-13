@@ -5,6 +5,7 @@ from pydantic import BaseModel, Field
 from app.normalization.query_normalizer import load_terms, normalize_query
 from app.retrieval.hybrid_retriever import HybridRetriever
 from app.rag.answer_generator import generate_answer
+from app.rag.furiosa_client import FuriosaClient
 
 ROOT = Path(__file__).resolve().parents[2]
 METADATA = ROOT / "data" / "metadata" / "documents.jsonl"
@@ -28,6 +29,7 @@ app = FastAPI(title="Semiconductor Equipment Technical RAG Copilot", version="0.
 documents = load_documents()
 retriever = HybridRetriever(documents)
 terms = load_terms(DICTIONARY)
+llm = FuriosaClient()
 
 
 class QueryRequest(BaseModel):
@@ -37,7 +39,7 @@ class QueryRequest(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "service": "technical-rag-copilot", "documents": len(documents)}
+    return {"status": "ok", "service": "technical-rag-copilot", "documents": len(documents), "furiosa_configured": llm.enabled, "furiosa_model": llm.model if llm.enabled else None}
 
 
 @app.get("/api/v1/documents")
@@ -49,7 +51,7 @@ def list_documents():
 def query(request: QueryRequest):
     normalized = normalize_query(request.question, terms)
     evidence = retriever.search(normalized["normalized"], request.top_k)
-    answer = generate_answer(request.question, evidence)
+    answer = generate_answer(request.question, evidence, llm)
     answer["query"] = normalized
     answer["retrieval"] = {"method": "bm25+tfidf-cosine", "keyword_weight": retriever.keyword_weight, "vector_weight": retriever.vector_weight}
     return answer

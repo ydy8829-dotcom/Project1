@@ -55,3 +55,24 @@
 - 원인: Furiosa NPU 서버/SDK가 이 실행 환경에 연결되어 있지 않음.
 - 조치: 실측 수치는 생성하지 않고, NPU 연결 후 기록할 필드와 단계만 `docs/process_record.md`에 정의했다.
 - 재발 방지: NPU/GPU 성능 수치는 반드시 동일 모델·동일 프롬프트·동일 하드웨어 조건에서 실제 측정한 값만 PPT에 반영한다.
+
+## 2026-08-13 / 자동 원격 실행 차단
+
+- 상황: 자동으로 `ssh furiosa`를 실행해 NPU 모델 서버를 시작하려 했으나 현재 Codex 실행 환경에는 사용자의 SSH 별칭/설정이 전달되지 않아 `furiosa` 호스트를 해석할 수 없었다.
+- 원인: 사용자의 PowerShell 세션과 Codex 도구 실행 환경이 서로 다른 SSH 설정·인증 컨텍스트를 사용함.
+- 조치: 원격 서버에서 모델을 실행했다고 가장하지 않고 실행을 중단했다. 사용자 터미널에서 실행할 단일 명령을 제공해야 한다.
+- 재발 방지: 원격 실행 전 `ssh -G furiosa`와 `ssh furiosa 'hostname'` 연결 검증을 통과한 뒤에만 모델 로딩 명령을 실행한다.
+
+## 2026-08-13 / Qwen3 reasoning 토큰 고갈
+
+- 상황: `/v1/chat/completions` 응답에서 `message.content`가 `null`이고 `reasoning`만 반환되며 `finish_reason=length`가 발생함.
+- 원인: Qwen3 thinking 모드가 `max_tokens=300`을 reasoning에 모두 사용해 최종 답변을 생성할 토큰이 부족했음.
+- 조치: 일반 RAG 답변 테스트에서는 질문 끝에 `/no_think`를 넣고, `max_tokens`를 500 이상으로 설정한다. 심층 추론 실험은 별도 실험으로 분리한다.
+- 재발 방지: `content` null, `finish_reason=length`, reasoning token 비율을 API 후처리에서 검사하고 재시도 정책을 둔다.
+
+## 2026-08-13 / 문서 근거 테스트의 해석 과잉
+
+- 상황: 근거 주입 테스트는 성공했지만, 모델이 원문에 직접 없는 "게이트 구조 형성에 필요한 SiGe 층"이라는 설명을 추가함.
+- 원인: 모델이 문서의 GAA·SiGe removal 관계를 일반 반도체 지식으로 확장 해석함.
+- 조치: 최종 프롬프트에서 직접 근거와 해석을 분리하고, 문서에 없는 세부 공정 설명은 불확실성 표시를 붙이도록 수정할 예정.
+- 재발 방지: citation accuracy와 unsupported claim rate를 별도 평가 지표로 측정한다.
