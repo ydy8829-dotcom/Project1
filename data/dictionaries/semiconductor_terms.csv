@@ -1,0 +1,21 @@
+canonical,alias,category
+High Aspect Ratio,HAR,etch
+High Aspect Ratio Etch,HAR Etch,etch
+Chemical Vapor Deposition,CVD,deposition
+Atomic Layer Deposition,ALD,deposition
+Plasma-Enhanced Chemical Vapor Deposition,PECVD,deposition
+High-Density Plasma Chemical Vapor Deposition,HDP-CVD,deposition
+Atomic Layer Etch,ALE,etch
+Reactive Ion Etch,RIE,etch
+Deep Reactive Ion Etch,DRIE,etch
+Gate-All-Around,GAA,device_structure
+Through-Silicon Via,TSV,packaging
+Chemical Mechanical Planarization,CMP,cmp
+Chemical Mechanical Polishing,CMP,cmp
+Wafer Clean,Wet Clean,clean
+Photoresist Strip,PR Strip,clean
+3D NAND,3D NAND,memory
+FinFET,FinFET,device_structure
+Electrochemical Deposition,ECD,deposition
+Selective Etch,Selective Removal,etch
+Plasma Bevel Etch,Bevel Etch,etch

@@ -1,0 +1,43 @@
+# 오류·수정 기록(시말서)
+
+## 2026-08-13 / 1차 실행 환경 오류
+
+- 상황: `python` 및 `pytest` 명령을 직접 실행했으나 Windows 실행 환경에 Python 본체와 pytest 명령이 등록되어 있지 않아 테스트가 시작되지 않음.
+- 원인: 프로젝트 가상환경이 아직 생성되지 않았고 WindowsApps 실행 별칭만 존재함.
+- 조치: 프로젝트 내부 `.uv-cache`를 사용하도록 설정한 `uv run`으로 정적 컴파일과 테스트를 수행함.
+- 재발 방지: README에 `uv run` 대체 실행법을 추가하고, 배포 전 `python -m compileall`과 pytest를 모두 실행한다.
+
+## 2026-08-13 / 데이터 복사 경로 오류
+
+- 상황: 수집 데이터 디렉터리를 처음 복사할 때 PowerShell `Copy-Item`의 `-LiteralPath` 인자에 원본과 목적지를 함께 전달하여 복사가 실패했고, 재시도 과정에서 중첩 디렉터리가 생성됨.
+- 원인: `-Destination`을 명시하지 않은 경로 인자 사용.
+- 조치: 올바른 목적지에 핵심 파일을 다시 복사하고 애플리케이션은 `data/metadata/documents.jsonl` 등 정규 경로만 사용하도록 고정함.
+- 재발 방지: 데이터 경로를 실행 전 `Test-Path`로 확인하고 복사 명령에는 항상 `-Destination`을 명시한다.
+
+## 2026-08-13 / 정규화 테스트 실패
+
+- 상황: `AMAT plasma etch CD` 정규화 테스트에서 `critical dimension` 확장이 누락됨.
+- 원인: 새 용어 사전 로더에 CD alias를 반영하지 않음.
+- 조치: `critical dimension -> cd` 매핑을 추가.
+- 상태: 수정 후 재검증 예정.
+
+## 2026-08-13 / API 스모크 테스트 명령 오류
+
+- 상황: pytest 통과 후 PowerShell 해시테이블 표현식을 Python `-c`의 JSON 인자로 직접 삽입해 Python SyntaxError가 발생함.
+- 원인: 셸 문법과 Python 문법을 한 명령문 안에서 혼용함.
+- 조치: JSON 문자열을 Python 코드 내부에서 직접 전달하는 방식으로 스모크 테스트를 재실행한다.
+- 재발 방지: 복합 셸 명령 대신 별도 테스트 파일 또는 단순한 리터럴 JSON을 사용한다.
+
+## 2026-08-13 / API 스모크 테스트 재시도 명령 오류
+
+- 상황: 셸 인용부호가 다시 해석되어 Python 문자열의 URL·JSON 따옴표가 제거되고 SyntaxError가 재발함.
+- 원인: PowerShell과 실행 도구의 다중 인용부호 처리 차이.
+- 조치: 동일 검증을 재사용 가능한 pytest 케이스로 전환하고, 직접 명령 스모크 테스트 의존을 제거한다.
+- 재발 방지: API 검증은 `pytest` 테스트 파일로 유지하고 셸에서는 단일 명령만 실행한다.
+
+## 2026-08-13 / ingestion CLI import 오류
+
+- 상황: `python scripts/ingest_documents.py` 실행 시 `ModuleNotFoundError: app` 발생.
+- 원인: Python이 실행 파일 디렉터리인 `scripts`만 import 경로에 넣고 프로젝트 루트를 자동으로 넣지 않음.
+- 조치: 스크립트 시작 시 프로젝트 루트를 `sys.path`에 추가.
+- 재발 방지: CLI 스크립트는 프로젝트 루트에서 직접 실행하는 경우와 파일 경로 실행 모두를 테스트한다.
