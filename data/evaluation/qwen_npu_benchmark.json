@@ -1,0 +1,14 @@
+{
+  "benchmark": "qwen_generation_only",
+  "backend": "npu",
+  "base_url": "http://127.0.0.1:18001/v1",
+  "model": "furiosa-ai/Qwen3-8B-FP8",
+  "requests": 20,
+  "average_latency_seconds": 1.7371,
+  "min_latency_seconds": 0.8223,
+  "max_latency_seconds": 2.165,
+  "p95_latency_seconds": 2.1235,
+  "tokens_per_second": 62.232,
+  "requests_per_second": 0.5757,
+  "max_tokens": 128
+}
