@@ -18,6 +18,8 @@ sys.path.insert(0, str(ROOT))
 
 from app.normalization.query_normalizer import load_terms, normalize_query  # noqa: E402
 from app.retrieval.hybrid_retriever import HybridRetriever  # noqa: E402
+from app.retrieval.furiosa_embedding import FuriosaEmbeddingClient  # noqa: E402
+from app.retrieval.furiosa_reranker import FuriosaReranker  # noqa: E402
 
 METADATA = ROOT / "data" / "metadata" / "documents.jsonl"
 EVAL_DIR = ROOT / "data" / "evaluation"
@@ -94,11 +96,14 @@ def write_dataset(rows: list[dict]) -> None:
 
 def evaluate(rows: list[dict], documents: list[dict]) -> dict:
     terms = load_terms(ROOT / "data" / "dictionaries" / "semiconductor_terms.csv")
-    retriever = HybridRetriever(documents)
+    embedding_client = FuriosaEmbeddingClient()
+    reranker = FuriosaReranker()
+    retriever = HybridRetriever(documents, embedding_client=embedding_client)
     details = []
     for row in rows:
         normalized = normalize_query(row["question"], terms)
-        results = retriever.search(normalized["normalized"], 10)
+        candidates = retriever.search(normalized["normalized"], 10)
+        results = reranker.rerank(normalized["normalized"], candidates, 10) if reranker.enabled else candidates
         ranked = [item.get("title", "") for item in results]
         relevance = {item["title"]: item.get("relevance", 1) for item in row.get("relevant_documents", [])}
         expected = set(relevance) or set(row["expected_documents"])
@@ -119,7 +124,17 @@ def evaluate(rows: list[dict], documents: list[dict]) -> dict:
         "recall_at_3": round(sum(x["hit_top_3"] for x in details) / n, 4),
         "mean_ndcg_at_3": round(sum(x["ndcg_at_3"] for x in details) / n, 4),
         "rank_distribution": dict(sorted(Counter(ranks).items())),
-        "retrieval": {"method": "bm25+tfidf-cosine", "keyword_weight": retriever.keyword_weight, "vector_weight": retriever.vector_weight},
+        "retrieval": {
+            "method": "bm25+embedding-cosine+reranker" if reranker.enabled and embedding_client.enabled else (
+                "bm25+tfidf-cosine+reranker" if reranker.enabled else (
+                    "bm25+embedding-cosine" if embedding_client.enabled else "bm25+tfidf-cosine"
+                )
+            ),
+            "keyword_weight": retriever.keyword_weight,
+            "vector_weight": retriever.vector_weight,
+            "embedding_configured": embedding_client.enabled,
+            "reranker_configured": reranker.enabled,
+        },
         "details": details,
     }
     RESULT.write_text(json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8")

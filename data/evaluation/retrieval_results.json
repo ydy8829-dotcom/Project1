@@ -1,27 +1,22 @@
 {
   "dataset_size": 50,
   "dataset_status": "synthetic_seed_needs_domain_review",
-  "top_1_accuracy": 0.06,
-  "top_3_accuracy": 0.38,
-  "mrr": 0.2919,
-  "recall_at_3": 0.38,
-  "mean_ndcg_at_3": 0.2406,
+  "top_1_accuracy": 0.9,
+  "top_3_accuracy": 0.92,
+  "mrr": 0.9117,
+  "recall_at_3": 0.92,
+  "mean_ndcg_at_3": 0.8994,
   "rank_distribution": {
-    "1": 3,
-    "2": 9,
-    "3": 7,
-    "4": 7,
-    "5": 1,
-    "6": 8,
-    "7": 4,
-    "8": 3,
-    "9": 3,
-    "10": 2
+    "1": 45,
+    "3": 1,
+    "4": 1
   },
   "retrieval": {
-    "method": "bm25+tfidf-cosine",
+    "method": "bm25+tfidf-cosine+reranker",
     "keyword_weight": 0.55,
-    "vector_weight": 0.45
+    "vector_weight": 0.45,
+    "embedding_configured": false,
+    "reranker_configured": true
   },
   "details": [
     {
@@ -32,10 +27,10 @@
       ],
       "ranked_documents": [
         "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Coronus Product Family",
+        "Etch",
+        "Selective Etch Product Family",
+        "Building on an Unmatched Foundation of CVD Innovation"
       ],
       "hit_top_1": true,
       "hit_top_3": true,
@@ -50,10 +45,10 @@
       ],
       "ranked_documents": [
         "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
+        "Etch",
+        "Selective Etch Product Family",
         "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Endura Trillium ALD"
       ],
       "hit_top_1": true,
       "hit_top_3": true,
@@ -68,10 +63,10 @@
       ],
       "ranked_documents": [
         "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Selective Etch Product Family",
+        "Producer Precision Selective Nitride PECVD",
+        "Etch",
+        "Product Library"
       ],
       "hit_top_1": true,
       "hit_top_3": true,
@@ -85,16 +80,16 @@
         "Product Library"
       ],
       "ranked_documents": [
-        "Shape",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
+        "Coronus Product Family",
+        "Selective Etch Product Family",
+        "Building on an Unmatched Foundation of CVD Innovation",
         "Producer Precision Selective Nitride PECVD"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 2,
-      "ndcg_at_3": 0.6309
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S005",
@@ -103,16 +98,16 @@
         "Product Library"
       ],
       "ranked_documents": [
-        "Shape",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Coronus Product Family",
+        "Selective Etch Product Family",
+        "ALTUS Product Family",
+        "Endura Trillium ALD"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 2,
-      "ndcg_at_3": 0.6309
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S006",
@@ -121,16 +116,16 @@
         "Product Library"
       ],
       "ranked_documents": [
-        "Shape",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
+        "Selective Etch Product Family",
+        "Vantex Product Family",
+        "Coronus Product Family",
         "Producer Precision Selective Nitride PECVD"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 2,
-      "ndcg_at_3": 0.6309
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S007",
@@ -139,16 +134,16 @@
         "Endura Trillium ALD"
       ],
       "ranked_documents": [
-        "Shape",
         "Endura Trillium ALD",
-        "Product Library",
         "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Product Library",
+        "Shape",
+        "Building on an Unmatched Foundation of CVD Innovation"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 2,
-      "ndcg_at_3": 0.6309
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S008",
@@ -157,16 +152,16 @@
         "Endura Trillium ALD"
       ],
       "ranked_documents": [
-        "Shape",
         "Endura Trillium ALD",
-        "Product Library",
         "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Product Library",
+        "Shape",
+        "Etch"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 2,
-      "ndcg_at_3": 0.6309
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S009",
@@ -175,16 +170,16 @@
         "Endura Trillium ALD"
       ],
       "ranked_documents": [
-        "Shape",
         "Endura Trillium ALD",
-        "Product Library",
         "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Product Library",
+        "Shape",
+        "Building on an Unmatched Foundation of CVD Innovation"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 2,
-      "ndcg_at_3": 0.6309
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S010",
@@ -193,16 +188,16 @@
         "Olympia ALD"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
         "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Endura Trillium ALD",
+        "Product Library",
+        "Shape",
+        "Building on an Unmatched Foundation of CVD Innovation"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 4,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S011",
@@ -211,16 +206,16 @@
         "Olympia ALD"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
         "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Endura Trillium ALD",
+        "Product Library",
+        "Shape",
+        "Etch"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 4,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S012",
@@ -229,16 +224,16 @@
         "Olympia ALD"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
         "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Endura Trillium ALD",
+        "Product Library",
+        "Shape",
+        "Building on an Unmatched Foundation of CVD Innovation"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 4,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S013",
@@ -247,16 +242,16 @@
         "Producer Precision Selective Nitride PECVD"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
         "Producer Precision Selective Nitride PECVD",
-        "Endura Trillium ALD",
-        "Olympia ALD"
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Product Library",
+        "Selective Etch Product Family",
+        "Shape"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 3,
-      "ndcg_at_3": 0.5
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S014",
@@ -265,16 +260,16 @@
         "Producer Precision Selective Nitride PECVD"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
         "Producer Precision Selective Nitride PECVD",
-        "Endura Trillium ALD",
-        "Olympia ALD"
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Selective Etch Product Family",
+        "Product Library",
+        "Shape"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 3,
-      "ndcg_at_3": 0.5
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S015",
@@ -283,16 +278,16 @@
         "Producer Precision Selective Nitride PECVD"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
         "Producer Precision Selective Nitride PECVD",
-        "Endura Trillium ALD",
-        "Olympia ALD"
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Selective Etch Product Family",
+        "Product Library",
+        "Shape"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 3,
-      "ndcg_at_3": 0.5
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S016",
@@ -301,16 +296,16 @@
         "Building on an Unmatched Foundation of CVD Innovation"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
         "Building on an Unmatched Foundation of CVD Innovation",
+        "Our Processes",
+        "Product Library",
+        "Producer Precision Selective Nitride PECVD",
         "Olympia ALD"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 4,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S017",
@@ -319,16 +314,16 @@
         "Building on an Unmatched Foundation of CVD Innovation"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
         "Building on an Unmatched Foundation of CVD Innovation",
+        "Our Processes",
+        "Product Library",
+        "Producer Precision Selective Nitride PECVD",
         "Olympia ALD"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 4,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S018",
@@ -337,16 +332,16 @@
         "Building on an Unmatched Foundation of CVD Innovation"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
         "Building on an Unmatched Foundation of CVD Innovation",
+        "Our Processes",
+        "Producer Precision Selective Nitride PECVD",
+        "Product Library",
         "Olympia ALD"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 4,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S019",
@@ -355,15 +350,15 @@
         "Etch"
       ],
       "ranked_documents": [
-        "Shape",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Selective Etch Product Family",
+        "Shape",
+        "Etch",
+        "Building on an Unmatched Foundation of CVD Innovation"
       ],
       "hit_top_1": false,
       "hit_top_3": false,
-      "first_relevant_rank": 7,
+      "first_relevant_rank": 4,
       "ndcg_at_3": 0.0
     },
     {
@@ -373,16 +368,16 @@
         "Etch"
       ],
       "ranked_documents": [
-        "Shape",
+        "Etch",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Shape",
+        "Selective Etch Product Family",
+        "Akara"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 7,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S021",
@@ -391,16 +386,16 @@
         "Etch"
       ],
       "ranked_documents": [
-        "Shape",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Selective Etch Product Family",
+        "Etch",
+        "Shape",
+        "Coronus Product Family"
       ],
       "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 7,
-      "ndcg_at_3": 0.0
+      "hit_top_3": true,
+      "first_relevant_rank": 3,
+      "ndcg_at_3": 0.5
     },
     {
       "question_id": "S022",
@@ -409,16 +404,16 @@
         "Akara"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Akara",
+        "Selective Etch Product Family",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Coronus Product Family",
+        "Product Library"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 8,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S023",
@@ -427,16 +422,16 @@
         "Akara"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
+        "Akara",
         "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Product Library",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Olympia ALD"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 8,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S024",
@@ -445,16 +440,16 @@
         "Akara"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Akara",
+        "Selective Etch Product Family",
+        "Producer Precision Selective Nitride PECVD",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Coronus Product Family"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 8,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S025",
@@ -463,16 +458,16 @@
         "Selective Etch Product Family"
       ],
       "ranked_documents": [
+        "Selective Etch Product Family",
         "Shape",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Etch",
+        "Coronus Product Family"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 9,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S026",
@@ -481,16 +476,16 @@
         "Selective Etch Product Family"
       ],
       "ranked_documents": [
+        "Selective Etch Product Family",
         "Shape",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Etch",
+        "Coronus Product Family"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 9,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S027",
@@ -499,16 +494,16 @@
         "Selective Etch Product Family"
       ],
       "ranked_documents": [
+        "Selective Etch Product Family",
         "Shape",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Etch",
+        "Coronus Product Family"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 9,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S028",
@@ -517,16 +512,16 @@
         "Coronus Product Family"
       ],
       "ranked_documents": [
-        "Shape",
+        "Coronus Product Family",
+        "Selective Etch Product Family",
+        "Vantex Product Family",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "ALTUS Product Family"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 6,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S029",
@@ -535,16 +530,16 @@
         "Coronus Product Family"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
         "Coronus Product Family",
-        "Olympia ALD"
+        "Selective Etch Product Family",
+        "Product Library",
+        "Vantex Product Family",
+        "ALTUS Product Family"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 4,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S030",
@@ -553,16 +548,16 @@
         "Coronus Product Family"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Coronus Product Family",
+        "Selective Etch Product Family",
+        "Vantex Product Family",
+        "ALTUS Product Family",
+        "Product Library"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 6,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S031",
@@ -571,16 +566,16 @@
         "Vantex Product Family"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
         "Vantex Product Family",
-        "Endura Trillium ALD",
-        "Olympia ALD"
+        "Selective Etch Product Family",
+        "Product Library",
+        "Coronus Product Family",
+        "ALTUS Product Family"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 3,
-      "ndcg_at_3": 0.5
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S032",
@@ -589,16 +584,16 @@
         "Vantex Product Family"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
         "Vantex Product Family",
-        "Endura Trillium ALD",
-        "Olympia ALD"
+        "Product Library",
+        "Selective Etch Product Family",
+        "Coronus Product Family",
+        "ALTUS Product Family"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 3,
-      "ndcg_at_3": 0.5
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S033",
@@ -607,16 +602,16 @@
         "Vantex Product Family"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
         "Vantex Product Family",
-        "Endura Trillium ALD",
-        "Olympia ALD"
+        "Selective Etch Product Family",
+        "Coronus Product Family",
+        "Product Library",
+        "ALTUS Product Family"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 3,
-      "ndcg_at_3": 0.5
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S034",
@@ -625,16 +620,16 @@
         "Our Processes"
       ],
       "ranked_documents": [
-        "Shape",
         "Our Processes",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD"
+        "Akara",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Selective Etch Product Family",
+        "Producer Precision Selective Nitride PECVD"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 2,
-      "ndcg_at_3": 0.6309
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S035",
@@ -643,16 +638,16 @@
         "Our Processes"
       ],
       "ranked_documents": [
-        "Shape",
         "Our Processes",
+        "Akara",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD"
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Producer Precision Selective Nitride PECVD"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 2,
-      "ndcg_at_3": 0.6309
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S036",
@@ -661,16 +656,16 @@
         "Our Processes"
       ],
       "ranked_documents": [
-        "Shape",
         "Our Processes",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD"
+        "Selective Etch Product Family",
+        "Producer Precision Selective Nitride PECVD",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Product Library"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 2,
-      "ndcg_at_3": 0.6309
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S037",
@@ -679,16 +674,16 @@
         "ALTUS Product Family"
       ],
       "ranked_documents": [
-        "Shape",
+        "ALTUS Product Family",
+        "Selective Etch Product Family",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Vantex Product Family",
+        "Coronus Product Family"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 6,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S038",
@@ -697,16 +692,16 @@
         "ALTUS Product Family"
       ],
       "ranked_documents": [
-        "Shape",
+        "ALTUS Product Family",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Selective Etch Product Family",
+        "Coronus Product Family",
+        "Vantex Product Family"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 6,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S039",
@@ -715,16 +710,16 @@
         "ALTUS Product Family"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "ALTUS Product Family",
+        "Selective Etch Product Family",
+        "Vantex Product Family",
+        "Coronus Product Family",
+        "Product Library"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 6,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S040",
@@ -733,16 +728,16 @@
         "Reliant Clean Products"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Reliant Clean Products",
+        "SP Series Product Family",
+        "Coronus Product Family",
+        "ALTUS Product Family",
+        "Endura Trillium ALD"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 6,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S041",
@@ -751,16 +746,16 @@
         "Reliant Clean Products"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Reliant Clean Products",
+        "SP Series Product Family",
+        "Coronus Product Family",
+        "ALTUS Product Family",
+        "Endura Trillium ALD"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 6,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S042",
@@ -769,16 +764,16 @@
         "Reliant Clean Products"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Reliant Clean Products",
+        "SP Series Product Family",
+        "Coronus Product Family",
+        "ALTUS Product Family",
+        "Endura Trillium ALD"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 6,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S043",
@@ -789,9 +784,9 @@
       "ranked_documents": [
         "Shape",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Etch",
+        "Vantex Product Family",
+        "Selective Etch Product Family"
       ],
       "hit_top_1": false,
       "hit_top_3": false,
@@ -805,11 +800,11 @@
         "SP Series Product Family"
       ],
       "ranked_documents": [
-        "Shape",
+        "Etch",
         "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Shape",
+        "Vantex Product Family",
+        "Selective Etch Product Family"
       ],
       "hit_top_1": false,
       "hit_top_3": false,
@@ -823,11 +818,11 @@
         "SP Series Product Family"
       ],
       "ranked_documents": [
+        "Vantex Product Family",
+        "Etch",
         "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Selective Etch Product Family",
+        "Product Library"
       ],
       "hit_top_1": false,
       "hit_top_3": false,
@@ -842,16 +837,16 @@
         "Producer Precision Selective Nitride PECVD"
       ],
       "ranked_documents": [
+        "Selective Etch Product Family",
+        "Producer Precision Selective Nitride PECVD",
         "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Etch",
+        "Endura Trillium ALD"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 5,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S047",
@@ -861,16 +856,16 @@
         "Etch"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Vantex Product Family",
+        "Etch",
+        "Akara",
+        "Selective Etch Product Family",
+        "Olympia ALD"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 7,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S048",
@@ -880,16 +875,16 @@
         "Olympia ALD"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
         "Endura Trillium ALD",
         "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Product Library",
+        "Shape",
+        "Building on an Unmatched Foundation of CVD Innovation"
       ],
-      "hit_top_1": false,
+      "hit_top_1": true,
       "hit_top_3": true,
-      "first_relevant_rank": 3,
-      "ndcg_at_3": 0.352
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     },
     {
       "question_id": "S049",
@@ -899,16 +894,16 @@
         "SP Series Product Family"
       ],
       "ranked_documents": [
-        "Shape",
-        "Product Library",
-        "Endura Trillium ALD",
-        "Olympia ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "SP Series Product Family",
+        "Etch",
+        "Selective Etch Product Family",
+        "Akara",
+        "Product Library"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 10,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 0.4693
     },
     {
       "question_id": "S050",
@@ -917,16 +912,16 @@
         "Our Processes"
       ],
       "ranked_documents": [
-        "Shape",
-        "Olympia ALD",
+        "Our Processes",
+        "Etch",
         "Product Library",
-        "Endura Trillium ALD",
-        "Producer Precision Selective Nitride PECVD"
+        "Akara",
+        "Olympia ALD"
       ],
-      "hit_top_1": false,
-      "hit_top_3": false,
-      "first_relevant_rank": 10,
-      "ndcg_at_3": 0.0
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
     }
   ]
 }
