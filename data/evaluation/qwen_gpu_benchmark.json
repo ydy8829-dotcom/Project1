@@ -1,0 +1,168 @@
+{
+  "benchmark": "qwen_generation_only",
+  "backend": "gpu",
+  "execution": "local PyTorch CUDA generation; tokenizer and GPU generation are timed together",
+  "model": "unsloth/Qwen3-8B-bnb-4bit",
+  "model_family": "Qwen3-8B",
+  "quantization": "bitsandbytes 4-bit NF4",
+  "device": "NVIDIA GeForce RTX 4060",
+  "cuda_version": "12.8",
+  "requests": 20,
+  "warmup_requests": 2,
+  "average_latency_seconds": 6.8514,
+  "min_latency_seconds": 4.2024,
+  "max_latency_seconds": 8.5005,
+  "p95_latency_seconds": 8.3505,
+  "tokens_per_second": 15.705,
+  "requests_per_second": 0.146,
+  "max_tokens": 128,
+  "peak_allocated_vram_mib": 5836.0,
+  "peak_reserved_vram_mib": 5850.0,
+  "rows": [
+    {
+      "index": 1,
+      "question": "RIE와 ALE의 차이를 제공된 근거 범위에서 설명하라.",
+      "latency_seconds": 8.0603,
+      "completion_tokens": 128,
+      "tokens_per_second": 15.88
+    },
+    {
+      "index": 2,
+      "question": "HAR etch와 3D 구조의 관계를 문서 근거로 설명하라.",
+      "latency_seconds": 8.0378,
+      "completion_tokens": 128,
+      "tokens_per_second": 15.925
+    },
+    {
+      "index": 3,
+      "question": "문서에 처리량 수치가 없을 때 어떻게 답변해야 하는가?",
+      "latency_seconds": 4.2719,
+      "completion_tokens": 67,
+      "tokens_per_second": 15.684
+    },
+    {
+      "index": 4,
+      "question": "반도체 식각 공정에서 선택비가 중요한 이유를 설명하라.",
+      "latency_seconds": 8.0177,
+      "completion_tokens": 128,
+      "tokens_per_second": 15.965
+    },
+    {
+      "index": 5,
+      "question": "GAA 구조에서 SiGe 제거가 언급되는 문서 근거를 요약하라.",
+      "latency_seconds": 5.5388,
+      "completion_tokens": 87,
+      "tokens_per_second": 15.707
+    },
+    {
+      "index": 6,
+      "question": "RIE와 ALE의 차이를 제공된 근거 범위에서 설명하라.",
+      "latency_seconds": 8.0135,
+      "completion_tokens": 128,
+      "tokens_per_second": 15.973
+    },
+    {
+      "index": 7,
+      "question": "HAR etch와 3D 구조의 관계를 문서 근거로 설명하라.",
+      "latency_seconds": 8.18,
+      "completion_tokens": 128,
+      "tokens_per_second": 15.648
+    },
+    {
+      "index": 8,
+      "question": "문서에 처리량 수치가 없을 때 어떻게 답변해야 하는가?",
+      "latency_seconds": 4.3034,
+      "completion_tokens": 67,
+      "tokens_per_second": 15.569
+    },
+    {
+      "index": 9,
+      "question": "반도체 식각 공정에서 선택비가 중요한 이유를 설명하라.",
+      "latency_seconds": 8.127,
+      "completion_tokens": 128,
+      "tokens_per_second": 15.75
+    },
+    {
+      "index": 10,
+      "question": "GAA 구조에서 SiGe 제거가 언급되는 문서 근거를 요약하라.",
+      "latency_seconds": 5.5377,
+      "completion_tokens": 87,
+      "tokens_per_second": 15.71
+    },
+    {
+      "index": 11,
+      "question": "RIE와 ALE의 차이를 제공된 근거 범위에서 설명하라.",
+      "latency_seconds": 8.5005,
+      "completion_tokens": 128,
+      "tokens_per_second": 15.058
+    },
+    {
+      "index": 12,
+      "question": "HAR etch와 3D 구조의 관계를 문서 근거로 설명하라.",
+      "latency_seconds": 8.2304,
+      "completion_tokens": 128,
+      "tokens_per_second": 15.552
+    },
+    {
+      "index": 13,
+      "question": "문서에 처리량 수치가 없을 때 어떻게 답변해야 하는가?",
+      "latency_seconds": 4.2469,
+      "completion_tokens": 67,
+      "tokens_per_second": 15.776
+    },
+    {
+      "index": 14,
+      "question": "반도체 식각 공정에서 선택비가 중요한 이유를 설명하라.",
+      "latency_seconds": 8.0393,
+      "completion_tokens": 128,
+      "tokens_per_second": 15.922
+    },
+    {
+      "index": 15,
+      "question": "GAA 구조에서 SiGe 제거가 언급되는 문서 근거를 요약하라.",
+      "latency_seconds": 5.5929,
+      "completion_tokens": 87,
+      "tokens_per_second": 15.555
+    },
+    {
+      "index": 16,
+      "question": "RIE와 ALE의 차이를 제공된 근거 범위에서 설명하라.",
+      "latency_seconds": 8.3035,
+      "completion_tokens": 128,
+      "tokens_per_second": 15.415
+    },
+    {
+      "index": 17,
+      "question": "HAR etch와 3D 구조의 관계를 문서 근거로 설명하라.",
+      "latency_seconds": 8.3505,
+      "completion_tokens": 128,
+      "tokens_per_second": 15.328
+    },
+    {
+      "index": 18,
+      "question": "문서에 처리량 수치가 없을 때 어떻게 답변해야 하는가?",
+      "latency_seconds": 4.2024,
+      "completion_tokens": 67,
+      "tokens_per_second": 15.943
+    },
+    {
+      "index": 19,
+      "question": "반도체 식각 공정에서 선택비가 중요한 이유를 설명하라.",
+      "latency_seconds": 8.0257,
+      "completion_tokens": 128,
+      "tokens_per_second": 15.949
+    },
+    {
+      "index": 20,
+      "question": "GAA 구조에서 SiGe 제거가 언급되는 문서 근거를 요약하라.",
+      "latency_seconds": 5.4471,
+      "completion_tokens": 87,
+      "tokens_per_second": 15.972
+    }
+  ],
+  "comparison_limitations": [
+    "NPU 기준은 Furiosa Qwen3-8B-FP8 OpenAI API의 종단간 응답시간이고 GPU는 로컬 PyTorch 호출이다.",
+    "동일 Qwen3-8B 계열이지만 NPU는 FP8, GPU는 NF4 4-bit 양자화여서 절대 성능의 공정한 우열 결론에는 한계가 있다.",
+    "GPU 전력은 WDDM 환경에서 nvidia-smi가 Power Draw를 제공할 때만 별도로 기록한다."
+  ]
+}

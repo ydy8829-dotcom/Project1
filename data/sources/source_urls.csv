@@ -1,0 +1,15 @@
+company,process,document_type,title,source_url,collection_status
+Applied Materials,Etch,technology_page,Shape,https://www.appliedmaterials.com/us/en/semiconductor/products/shape.html,seed_extracted
+Applied Materials,Etch,product_page,Product Library,https://www.appliedmaterials.com/us/en/product-library.html,seed_extracted
+Applied Materials,Deposition,product_page,Endura Trillium ALD,https://www.appliedmaterials.com/us/en/product-library/endura-trillium-ald.html,seed_extracted
+Applied Materials,Deposition,product_page,Olympia ALD,https://www.appliedmaterials.com/us/en/product-library/olympia-ald.html,seed_extracted
+Applied Materials,Deposition,product_page,Producer Precision Selective Nitride PECVD,https://www.appliedmaterials.com/us/en/product-library/precision-selective-nitride-pecvd.html,seed_extracted
+Applied Materials,Deposition,technical_article,Building on an Unmatched Foundation of CVD Innovation,https://www.appliedmaterials.com/us/en/newsroom/blogs/building-on-an-unmatched-foundation-of-cvd-innovation.html,seed_extracted
+Lam Research,Etch,technology_page,Etch,https://www.lamresearch.com/products/our-processes/etch/,seed_extracted
+Lam Research,Etch,product_page,Selective Etch Product Family,https://www.lamresearch.com/product/selective-etch-product-family/,seed_extracted
+Lam Research,Etch,product_page,Coronus Product Family,https://www.lamresearch.com/product/coronus-product-family/,seed_extracted
+Lam Research,Deposition,technology_page,Our Processes,https://www.lamresearch.com/products/our-processes/,seed_extracted
+Lam Research,Deposition,product_page,ALTUS Product Family,https://www.lamresearch.com/product/altus-product-family/,seed_extracted
+Lam Research,Clean,product_page,Reliant Clean Products,https://www.lamresearch.com/product/reliant-strip-clean-products/,seed_extracted
+Lam Research,Clean,product_page,SP Series Product Family,https://www.lamresearch.com/product/sp-series-product-family/,seed_extracted
+Lam Research,Clean,technology_page,Wet Clean,https://www.lamresearch.com/technology/wet-clean/,seed_extracted

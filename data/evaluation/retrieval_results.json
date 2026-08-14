@@ -1,0 +1,927 @@
+{
+  "dataset_size": 50,
+  "dataset_status": "synthetic_seed_needs_domain_review",
+  "top_1_accuracy": 0.9,
+  "top_3_accuracy": 0.92,
+  "mrr": 0.9117,
+  "recall_at_3": 0.92,
+  "mean_ndcg_at_3": 0.8994,
+  "rank_distribution": {
+    "1": 45,
+    "3": 1,
+    "4": 1
+  },
+  "retrieval": {
+    "method": "bm25+tfidf-cosine+reranker",
+    "keyword_weight": 0.55,
+    "vector_weight": 0.45,
+    "embedding_configured": false,
+    "reranker_configured": true
+  },
+  "details": [
+    {
+      "question_id": "S001",
+      "question": "Shape의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "Shape"
+      ],
+      "ranked_documents": [
+        "Shape",
+        "Coronus Product Family",
+        "Etch",
+        "Selective Etch Product Family",
+        "Building on an Unmatched Foundation of CVD Innovation"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S002",
+      "question": "Shape에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "Shape"
+      ],
+      "ranked_documents": [
+        "Shape",
+        "Etch",
+        "Selective Etch Product Family",
+        "Olympia ALD",
+        "Endura Trillium ALD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S003",
+      "question": "Shape은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "Shape"
+      ],
+      "ranked_documents": [
+        "Shape",
+        "Selective Etch Product Family",
+        "Producer Precision Selective Nitride PECVD",
+        "Etch",
+        "Product Library"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S004",
+      "question": "Product Library의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "Product Library"
+      ],
+      "ranked_documents": [
+        "Product Library",
+        "Coronus Product Family",
+        "Selective Etch Product Family",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Producer Precision Selective Nitride PECVD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S005",
+      "question": "Product Library에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "Product Library"
+      ],
+      "ranked_documents": [
+        "Product Library",
+        "Coronus Product Family",
+        "Selective Etch Product Family",
+        "ALTUS Product Family",
+        "Endura Trillium ALD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S006",
+      "question": "Product Library은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "Product Library"
+      ],
+      "ranked_documents": [
+        "Product Library",
+        "Selective Etch Product Family",
+        "Vantex Product Family",
+        "Coronus Product Family",
+        "Producer Precision Selective Nitride PECVD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S007",
+      "question": "Endura Trillium ALD의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "Endura Trillium ALD"
+      ],
+      "ranked_documents": [
+        "Endura Trillium ALD",
+        "Olympia ALD",
+        "Product Library",
+        "Shape",
+        "Building on an Unmatched Foundation of CVD Innovation"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S008",
+      "question": "Endura Trillium ALD에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "Endura Trillium ALD"
+      ],
+      "ranked_documents": [
+        "Endura Trillium ALD",
+        "Olympia ALD",
+        "Product Library",
+        "Shape",
+        "Etch"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S009",
+      "question": "Endura Trillium ALD은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "Endura Trillium ALD"
+      ],
+      "ranked_documents": [
+        "Endura Trillium ALD",
+        "Olympia ALD",
+        "Product Library",
+        "Shape",
+        "Building on an Unmatched Foundation of CVD Innovation"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S010",
+      "question": "Olympia ALD의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "Olympia ALD"
+      ],
+      "ranked_documents": [
+        "Olympia ALD",
+        "Endura Trillium ALD",
+        "Product Library",
+        "Shape",
+        "Building on an Unmatched Foundation of CVD Innovation"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S011",
+      "question": "Olympia ALD에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "Olympia ALD"
+      ],
+      "ranked_documents": [
+        "Olympia ALD",
+        "Endura Trillium ALD",
+        "Product Library",
+        "Shape",
+        "Etch"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S012",
+      "question": "Olympia ALD은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "Olympia ALD"
+      ],
+      "ranked_documents": [
+        "Olympia ALD",
+        "Endura Trillium ALD",
+        "Product Library",
+        "Shape",
+        "Building on an Unmatched Foundation of CVD Innovation"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S013",
+      "question": "Producer Precision Selective Nitride PECVD의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "Producer Precision Selective Nitride PECVD"
+      ],
+      "ranked_documents": [
+        "Producer Precision Selective Nitride PECVD",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Product Library",
+        "Selective Etch Product Family",
+        "Shape"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S014",
+      "question": "Producer Precision Selective Nitride PECVD에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "Producer Precision Selective Nitride PECVD"
+      ],
+      "ranked_documents": [
+        "Producer Precision Selective Nitride PECVD",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Selective Etch Product Family",
+        "Product Library",
+        "Shape"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S015",
+      "question": "Producer Precision Selective Nitride PECVD은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "Producer Precision Selective Nitride PECVD"
+      ],
+      "ranked_documents": [
+        "Producer Precision Selective Nitride PECVD",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Selective Etch Product Family",
+        "Product Library",
+        "Shape"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S016",
+      "question": "Building on an Unmatched Foundation of CVD Innovation의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "Building on an Unmatched Foundation of CVD Innovation"
+      ],
+      "ranked_documents": [
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Our Processes",
+        "Product Library",
+        "Producer Precision Selective Nitride PECVD",
+        "Olympia ALD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S017",
+      "question": "Building on an Unmatched Foundation of CVD Innovation에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "Building on an Unmatched Foundation of CVD Innovation"
+      ],
+      "ranked_documents": [
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Our Processes",
+        "Product Library",
+        "Producer Precision Selective Nitride PECVD",
+        "Olympia ALD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S018",
+      "question": "Building on an Unmatched Foundation of CVD Innovation은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "Building on an Unmatched Foundation of CVD Innovation"
+      ],
+      "ranked_documents": [
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Our Processes",
+        "Producer Precision Selective Nitride PECVD",
+        "Product Library",
+        "Olympia ALD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S019",
+      "question": "Etch의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "Etch"
+      ],
+      "ranked_documents": [
+        "Product Library",
+        "Selective Etch Product Family",
+        "Shape",
+        "Etch",
+        "Building on an Unmatched Foundation of CVD Innovation"
+      ],
+      "hit_top_1": false,
+      "hit_top_3": false,
+      "first_relevant_rank": 4,
+      "ndcg_at_3": 0.0
+    },
+    {
+      "question_id": "S020",
+      "question": "Etch에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "Etch"
+      ],
+      "ranked_documents": [
+        "Etch",
+        "Product Library",
+        "Shape",
+        "Selective Etch Product Family",
+        "Akara"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S021",
+      "question": "Etch은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "Etch"
+      ],
+      "ranked_documents": [
+        "Product Library",
+        "Selective Etch Product Family",
+        "Etch",
+        "Shape",
+        "Coronus Product Family"
+      ],
+      "hit_top_1": false,
+      "hit_top_3": true,
+      "first_relevant_rank": 3,
+      "ndcg_at_3": 0.5
+    },
+    {
+      "question_id": "S022",
+      "question": "Akara의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "Akara"
+      ],
+      "ranked_documents": [
+        "Akara",
+        "Selective Etch Product Family",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Coronus Product Family",
+        "Product Library"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S023",
+      "question": "Akara에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "Akara"
+      ],
+      "ranked_documents": [
+        "Akara",
+        "Endura Trillium ALD",
+        "Product Library",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Olympia ALD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S024",
+      "question": "Akara은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "Akara"
+      ],
+      "ranked_documents": [
+        "Akara",
+        "Selective Etch Product Family",
+        "Producer Precision Selective Nitride PECVD",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Coronus Product Family"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S025",
+      "question": "Selective Etch Product Family의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "Selective Etch Product Family"
+      ],
+      "ranked_documents": [
+        "Selective Etch Product Family",
+        "Shape",
+        "Product Library",
+        "Etch",
+        "Coronus Product Family"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S026",
+      "question": "Selective Etch Product Family에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "Selective Etch Product Family"
+      ],
+      "ranked_documents": [
+        "Selective Etch Product Family",
+        "Shape",
+        "Product Library",
+        "Etch",
+        "Coronus Product Family"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S027",
+      "question": "Selective Etch Product Family은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "Selective Etch Product Family"
+      ],
+      "ranked_documents": [
+        "Selective Etch Product Family",
+        "Shape",
+        "Product Library",
+        "Etch",
+        "Coronus Product Family"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S028",
+      "question": "Coronus Product Family의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "Coronus Product Family"
+      ],
+      "ranked_documents": [
+        "Coronus Product Family",
+        "Selective Etch Product Family",
+        "Vantex Product Family",
+        "Product Library",
+        "ALTUS Product Family"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S029",
+      "question": "Coronus Product Family에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "Coronus Product Family"
+      ],
+      "ranked_documents": [
+        "Coronus Product Family",
+        "Selective Etch Product Family",
+        "Product Library",
+        "Vantex Product Family",
+        "ALTUS Product Family"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S030",
+      "question": "Coronus Product Family은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "Coronus Product Family"
+      ],
+      "ranked_documents": [
+        "Coronus Product Family",
+        "Selective Etch Product Family",
+        "Vantex Product Family",
+        "ALTUS Product Family",
+        "Product Library"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S031",
+      "question": "Vantex Product Family의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "Vantex Product Family"
+      ],
+      "ranked_documents": [
+        "Vantex Product Family",
+        "Selective Etch Product Family",
+        "Product Library",
+        "Coronus Product Family",
+        "ALTUS Product Family"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S032",
+      "question": "Vantex Product Family에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "Vantex Product Family"
+      ],
+      "ranked_documents": [
+        "Vantex Product Family",
+        "Product Library",
+        "Selective Etch Product Family",
+        "Coronus Product Family",
+        "ALTUS Product Family"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S033",
+      "question": "Vantex Product Family은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "Vantex Product Family"
+      ],
+      "ranked_documents": [
+        "Vantex Product Family",
+        "Selective Etch Product Family",
+        "Coronus Product Family",
+        "Product Library",
+        "ALTUS Product Family"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S034",
+      "question": "Our Processes의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "Our Processes"
+      ],
+      "ranked_documents": [
+        "Our Processes",
+        "Akara",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Selective Etch Product Family",
+        "Producer Precision Selective Nitride PECVD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S035",
+      "question": "Our Processes에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "Our Processes"
+      ],
+      "ranked_documents": [
+        "Our Processes",
+        "Akara",
+        "Product Library",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Producer Precision Selective Nitride PECVD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S036",
+      "question": "Our Processes은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "Our Processes"
+      ],
+      "ranked_documents": [
+        "Our Processes",
+        "Selective Etch Product Family",
+        "Producer Precision Selective Nitride PECVD",
+        "Building on an Unmatched Foundation of CVD Innovation",
+        "Product Library"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S037",
+      "question": "ALTUS Product Family의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "ALTUS Product Family"
+      ],
+      "ranked_documents": [
+        "ALTUS Product Family",
+        "Selective Etch Product Family",
+        "Product Library",
+        "Vantex Product Family",
+        "Coronus Product Family"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S038",
+      "question": "ALTUS Product Family에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "ALTUS Product Family"
+      ],
+      "ranked_documents": [
+        "ALTUS Product Family",
+        "Product Library",
+        "Selective Etch Product Family",
+        "Coronus Product Family",
+        "Vantex Product Family"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S039",
+      "question": "ALTUS Product Family은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "ALTUS Product Family"
+      ],
+      "ranked_documents": [
+        "ALTUS Product Family",
+        "Selective Etch Product Family",
+        "Vantex Product Family",
+        "Coronus Product Family",
+        "Product Library"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S040",
+      "question": "Reliant Clean Products의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "Reliant Clean Products"
+      ],
+      "ranked_documents": [
+        "Reliant Clean Products",
+        "SP Series Product Family",
+        "Coronus Product Family",
+        "ALTUS Product Family",
+        "Endura Trillium ALD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S041",
+      "question": "Reliant Clean Products에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "Reliant Clean Products"
+      ],
+      "ranked_documents": [
+        "Reliant Clean Products",
+        "SP Series Product Family",
+        "Coronus Product Family",
+        "ALTUS Product Family",
+        "Endura Trillium ALD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S042",
+      "question": "Reliant Clean Products은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "Reliant Clean Products"
+      ],
+      "ranked_documents": [
+        "Reliant Clean Products",
+        "SP Series Product Family",
+        "Coronus Product Family",
+        "ALTUS Product Family",
+        "Endura Trillium ALD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S043",
+      "question": "SP Series Product Family의 핵심 공정 또는 적용 분야는 무엇인가?",
+      "expected_documents": [
+        "SP Series Product Family"
+      ],
+      "ranked_documents": [
+        "Shape",
+        "Product Library",
+        "Etch",
+        "Vantex Product Family",
+        "Selective Etch Product Family"
+      ],
+      "hit_top_1": false,
+      "hit_top_3": false,
+      "first_relevant_rank": null,
+      "ndcg_at_3": 0.0
+    },
+    {
+      "question_id": "S044",
+      "question": "SP Series Product Family에서 다루는 주요 기술 키워드는 무엇인가?",
+      "expected_documents": [
+        "SP Series Product Family"
+      ],
+      "ranked_documents": [
+        "Etch",
+        "Product Library",
+        "Shape",
+        "Vantex Product Family",
+        "Selective Etch Product Family"
+      ],
+      "hit_top_1": false,
+      "hit_top_3": false,
+      "first_relevant_rank": null,
+      "ndcg_at_3": 0.0
+    },
+    {
+      "question_id": "S045",
+      "question": "SP Series Product Family은 어떤 소자 구조나 제조 응용에 사용되는가?",
+      "expected_documents": [
+        "SP Series Product Family"
+      ],
+      "ranked_documents": [
+        "Vantex Product Family",
+        "Etch",
+        "Shape",
+        "Selective Etch Product Family",
+        "Product Library"
+      ],
+      "hit_top_1": false,
+      "hit_top_3": false,
+      "first_relevant_rank": null,
+      "ndcg_at_3": 0.0
+    },
+    {
+      "question_id": "S046",
+      "question": "GAA 관련 선택적 식각과 선택적 질화 증착 문서는 무엇인가?",
+      "expected_documents": [
+        "Selective Etch Product Family",
+        "Producer Precision Selective Nitride PECVD"
+      ],
+      "ranked_documents": [
+        "Selective Etch Product Family",
+        "Producer Precision Selective Nitride PECVD",
+        "Shape",
+        "Etch",
+        "Endura Trillium ALD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S047",
+      "question": "3D NAND와 고종횡비 식각을 다루는 Lam 문서는 무엇인가?",
+      "expected_documents": [
+        "Vantex Product Family",
+        "Etch"
+      ],
+      "ranked_documents": [
+        "Vantex Product Family",
+        "Etch",
+        "Akara",
+        "Selective Etch Product Family",
+        "Olympia ALD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S048",
+      "question": "ALD로 high-k 또는 유전체 박막을 다루는 Applied 문서는 무엇인가?",
+      "expected_documents": [
+        "Endura Trillium ALD",
+        "Olympia ALD"
+      ],
+      "ranked_documents": [
+        "Endura Trillium ALD",
+        "Olympia ALD",
+        "Product Library",
+        "Shape",
+        "Building on an Unmatched Foundation of CVD Innovation"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    },
+    {
+      "question_id": "S049",
+      "question": "웨이퍼 세정과 wet etch를 다루는 Lam 문서는 무엇인가?",
+      "expected_documents": [
+        "Reliant Clean Products",
+        "SP Series Product Family"
+      ],
+      "ranked_documents": [
+        "SP Series Product Family",
+        "Etch",
+        "Selective Etch Product Family",
+        "Akara",
+        "Product Library"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 0.4693
+    },
+    {
+      "question_id": "S050",
+      "question": "TSV 또는 wafer-level packaging 관련 증착 문서는 무엇인가?",
+      "expected_documents": [
+        "Our Processes"
+      ],
+      "ranked_documents": [
+        "Our Processes",
+        "Etch",
+        "Product Library",
+        "Akara",
+        "Olympia ALD"
+      ],
+      "hit_top_1": true,
+      "hit_top_3": true,
+      "first_relevant_rank": 1,
+      "ndcg_at_3": 1.0
+    }
+  ]
+}

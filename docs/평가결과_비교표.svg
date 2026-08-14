@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720">
+  <rect width="1400" height="720" fill="#f7fafc"/>
+  <text x="70" y="80" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#102a43">Semiconductor Equipment Technical RAG Copilot</text>
+  <text x="70" y="125" font-family="Arial, sans-serif" font-size="22" fill="#486581">50-question retrieval evaluation comparison</text>
+  <rect x="70" y="170" width="1260" height="70" rx="10" fill="#102a43"/>
+  <text x="110" y="215" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="white">Metric</text>
+  <text x="420" y="215" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="white">Baseline</text>
+  <text x="700" y="215" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="white">Embedding</text>
+  <text x="1030" y="215" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="white">Reranker</text>
+  <g font-family="Arial, sans-serif" font-size="24" fill="#243b53">
+    <rect x="70" y="240" width="1260" height="82" fill="white"/>
+    <text x="110" y="292">Top-1 accuracy</text><text x="450" y="292">6%</text><text x="750" y="292">18%</text><text x="1080" y="292" font-weight="700" fill="#14866d">90%</text>
+    <rect x="70" y="322" width="1260" height="82" fill="#edf2f7"/>
+    <text x="110" y="374">Top-3 / Recall@3</text><text x="450" y="374">38%</text><text x="750" y="374">68%</text><text x="1080" y="374" font-weight="700" fill="#14866d">92%</text>
+    <rect x="70" y="404" width="1260" height="82" fill="white"/>
+    <text x="110" y="456">MRR</text><text x="450" y="456">0.2919</text><text x="750" y="456">0.4242</text><text x="1080" y="456" font-weight="700" fill="#14866d">0.9117</text>
+    <rect x="70" y="486" width="1260" height="82" fill="#edf2f7"/>
+    <text x="110" y="538">Mean nDCG@3</text><text x="450" y="538">0.2406</text><text x="750" y="538">0.4427</text><text x="1080" y="538" font-weight="700" fill="#14866d">0.8994</text>
+  </g>
+  <line x1="70" y1="240" x2="1330" y2="240" stroke="#bcccdc" stroke-width="2"/>
+  <line x1="70" y1="568" x2="1330" y2="568" stroke="#bcccdc" stroke-width="2"/>
+  <text x="70" y="630" font-family="Arial, sans-serif" font-size="21" fill="#486581">Dataset: 50 synthetic seed questions | Target Top-3: 80%+</text>
+  <text x="70" y="670" font-family="Arial, sans-serif" font-size="20" fill="#627d98">Reranker result exceeds the target, subject to domain-expert review of relevance labels.</text>
+</svg>

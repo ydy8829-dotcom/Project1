@@ -1,0 +1,213 @@
+{
+  "benchmark": "end_to_end_npu_rag_api",
+  "api_url": "http://127.0.0.1:8002",
+  "warmup_requests": 2,
+  "measured_requests": 20,
+  "successful_requests": 20,
+  "success_rate": 1.0,
+  "average_latency_seconds": 1.836,
+  "min_latency_seconds": 0.0829,
+  "max_latency_seconds": 3.5045,
+  "p95_latency_seconds": 3.3846,
+  "throughput_requests_per_second": 0.5447,
+  "total_completion_tokens": 2078,
+  "completion_tokens_per_second": 56.591,
+  "health": {
+    "status": "ok",
+    "service": "technical-rag-copilot",
+    "documents": 15,
+    "furiosa_configured": true,
+    "furiosa_model": "furiosa-ai/Qwen3-8B-FP8",
+    "embedding_configured": false,
+    "embedding_model": null,
+    "reranker_configured": true,
+    "reranker_model": "furiosa-ai/Qwen3-Reranker-0.6B"
+  },
+  "rows": [
+    {
+      "index": 1,
+      "question": "Lam Research의 selective etch는 GAA에 어떻게 적용되는가?",
+      "latency_seconds": 3.3846,
+      "completion_tokens": 193,
+      "tokens_per_second": 57.023,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 2,
+      "question": "반도체 공정에서 HAR etch는 어떤 구조에 사용되는가?",
+      "latency_seconds": 1.0895,
+      "completion_tokens": 58,
+      "tokens_per_second": 53.237,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 3,
+      "question": "GAA 공정에서 SiGe removal의 문서 근거는 무엇인가?",
+      "latency_seconds": 2.2186,
+      "completion_tokens": 125,
+      "tokens_per_second": 56.343,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 4,
+      "question": "Lam Research의 RIE와 ALE는 어떻게 설명되는가?",
+      "latency_seconds": 1.9715,
+      "completion_tokens": 108,
+      "tokens_per_second": 54.781,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 5,
+      "question": "식각 장비의 정확한 처리량 수치가 문서에 제공되는가?",
+      "latency_seconds": 0.1574,
+      "completion_tokens": 0,
+      "tokens_per_second": null,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 6,
+      "question": "Lam Research의 selective etch는 GAA에 어떻게 적용되는가?",
+      "latency_seconds": 2.7317,
+      "completion_tokens": 148,
+      "tokens_per_second": 54.179,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 7,
+      "question": "반도체 공정에서 HAR etch는 어떤 구조에 사용되는가?",
+      "latency_seconds": 1.0822,
+      "completion_tokens": 58,
+      "tokens_per_second": 53.597,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 8,
+      "question": "GAA 공정에서 SiGe removal의 문서 근거는 무엇인가?",
+      "latency_seconds": 2.9034,
+      "completion_tokens": 172,
+      "tokens_per_second": 59.24,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 9,
+      "question": "Lam Research의 RIE와 ALE는 어떻게 설명되는가?",
+      "latency_seconds": 1.8307,
+      "completion_tokens": 107,
+      "tokens_per_second": 58.446,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 10,
+      "question": "식각 장비의 정확한 처리량 수치가 문서에 제공되는가?",
+      "latency_seconds": 0.0829,
+      "completion_tokens": 0,
+      "tokens_per_second": null,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 11,
+      "question": "Lam Research의 selective etch는 GAA에 어떻게 적용되는가?",
+      "latency_seconds": 3.3189,
+      "completion_tokens": 194,
+      "tokens_per_second": 58.453,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 12,
+      "question": "반도체 공정에서 HAR etch는 어떤 구조에 사용되는가?",
+      "latency_seconds": 1.056,
+      "completion_tokens": 58,
+      "tokens_per_second": 54.925,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 13,
+      "question": "GAA 공정에서 SiGe removal의 문서 근거는 무엇인가?",
+      "latency_seconds": 2.1664,
+      "completion_tokens": 125,
+      "tokens_per_second": 57.7,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 14,
+      "question": "Lam Research의 RIE와 ALE는 어떻게 설명되는가?",
+      "latency_seconds": 1.8975,
+      "completion_tokens": 108,
+      "tokens_per_second": 56.916,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 15,
+      "question": "식각 장비의 정확한 처리량 수치가 문서에 제공되는가?",
+      "latency_seconds": 0.0979,
+      "completion_tokens": 0,
+      "tokens_per_second": null,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 16,
+      "question": "Lam Research의 selective etch는 GAA에 어떻게 적용되는가?",
+      "latency_seconds": 3.1454,
+      "completion_tokens": 180,
+      "tokens_per_second": 57.226,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 17,
+      "question": "반도체 공정에서 HAR etch는 어떤 구조에 사용되는가?",
+      "latency_seconds": 3.5045,
+      "completion_tokens": 211,
+      "tokens_per_second": 60.209,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 18,
+      "question": "GAA 공정에서 SiGe removal의 문서 근거는 무엇인가?",
+      "latency_seconds": 2.0888,
+      "completion_tokens": 125,
+      "tokens_per_second": 59.844,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 19,
+      "question": "Lam Research의 RIE와 ALE는 어떻게 설명되는가?",
+      "latency_seconds": 1.9004,
+      "completion_tokens": 108,
+      "tokens_per_second": 56.829,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    },
+    {
+      "index": 20,
+      "question": "식각 장비의 정확한 처리량 수치가 문서에 제공되는가?",
+      "latency_seconds": 0.0912,
+      "completion_tokens": 0,
+      "tokens_per_second": null,
+      "retrieval_method": "bm25+tfidf-cosine+reranker",
+      "success": true
+    }
+  ],
+  "limitations": [
+    "측정값은 로컬 PC에서 FastAPI를 거쳐 NPU 모델 서버까지 포함한 종단간 지연시간이다.",
+    "전력소비는 별도 furiosa-smi 표본 측정이 필요하다.",
+    "GPU와의 비교는 동일 조건의 GPU 측정 후에만 결론낼 수 있다."
+  ]
+}
