@@ -1,4 +1,5 @@
 import os
+import re
 from typing import Any
 
 import httpx
@@ -16,6 +17,13 @@ class FuriosaClient:
     def enabled(self) -> bool:
         return bool(self.base_url)
 
+    @staticmethod
+    def _clean_response(text: str) -> str:
+        """Remove reasoning markers before exposing the answer in the UI/API."""
+        cleaned = re.sub(r"<think>.*?</think>", "", text or "", flags=re.IGNORECASE | re.DOTALL)
+        cleaned = re.sub(r"</?think>", "", cleaned, flags=re.IGNORECASE)
+        return cleaned.strip()
+
     def chat(self, question: str, evidence: list[dict[str, Any]], max_tokens: int = 500) -> dict[str, Any]:
         if not self.enabled:
             raise RuntimeError("FURIOSA_BASE_URL is not configured")
@@ -28,7 +36,7 @@ class FuriosaClient:
             "temperature": 0.1,
             "max_tokens": max_tokens,
             "messages": [
-                {"role": "system", "content": "You are a semiconductor equipment technical RAG assistant. Use only the supplied official document evidence. State as facts only claims directly supported by the evidence. If the evidence says only that a process is an application, do not infer an unstated purpose, sequence, mechanism, electrode/gate formation step, performance benefit, or material relationship. Put any unavoidable interpretation under a clearly labeled 'Interpretation' sentence and say it is an inference. Do not invent specifications or numbers. If the evidence is insufficient, say so. Always cite the relevant source URL. Answer in the user's language."},
+                {"role": "system", "content": "You are a semiconductor equipment technical RAG assistant. Use only the supplied official document evidence. State as facts only claims directly supported by the evidence. If the evidence says only that a process is an application, do not infer an unstated purpose, sequence, mechanism, electrode/gate formation step, performance benefit, or material relationship. Put any unavoidable interpretation under a clearly labeled 'Interpretation' sentence and say it is an inference. Do not invent specifications or numbers. If the evidence is insufficient, say so. Always cite the relevant source URL. LANGUAGE RULE: If the user question contains Korean, write the entire answer in Korean, including headings and the source sentence. Never answer a Korean question in English. Do not output hidden reasoning or <think> tags."},
                 {"role": "user", "content": f"Document evidence:\n{context}\n\nQuestion:\n{question} /no_think"},
             ],
         }
@@ -38,7 +46,7 @@ class FuriosaClient:
             body = response.json()
         choice = (body.get("choices") or [{}])[0]
         message = choice.get("message") or {}
-        content = message.get("content")
+        content = self._clean_response(message.get("content", ""))
         if not content:
             raise RuntimeError(f"Furiosa returned no content (finish_reason={choice.get('finish_reason')})")
         return {"text": content, "model": body.get("model", self.model), "usage": body.get("usage", {}), "finish_reason": choice.get("finish_reason")}
