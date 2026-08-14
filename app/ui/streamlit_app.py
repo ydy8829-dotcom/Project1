@@ -94,12 +94,6 @@ if st.session_state.history:
             st.markdown(f"**{index}. {title}**")
             st.caption(evidence.get("source_url", "출처 없음"))
             st.write(evidence.get("quote", ""))
-            meta = {key: evidence[key] for key in ("retriever", "rerank_score", "hybrid_score") if key in evidence}
-            if meta:
-                st.json(meta, expanded=False)
-    with st.expander("검색·LLM 원본 응답"):
-        st.json(result, expanded=False)
-
 if len(st.session_state.history) > 1:
     with st.expander(f"최근 질의 기록 ({len(st.session_state.history)-1}건)"):
         for item in st.session_state.history[1:6]:
