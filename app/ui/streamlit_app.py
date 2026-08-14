@@ -49,12 +49,6 @@ except Exception as exc:
 
 st.markdown('<div class="hero"><h1>Semiconductor Equipment Technical RAG Copilot</h1><p>공정·장비·제품 문서를 검색하고, 공식 근거와 함께 기술 답변을 확인합니다.</p></div>', unsafe_allow_html=True)
 
-status_cols = st.columns(4)
-status_cols[0].metric("API 상태", "정상" if api_ok else "연결 실패")
-status_cols[1].metric("문서 수", health.get("documents", "-"))
-status_cols[2].metric("생성 모델", "연결" if health.get("furiosa_configured") else "미연결")
-status_cols[3].metric("검색 보강", "Embedding" if health.get("embedding_configured") else ("Reranker" if health.get("reranker_configured") else "기본"))
-
 st.subheader("기술 질의")
 question = st.text_area("질문", value=selected_example, height=90, placeholder="예: GAA에서 selective etch가 어떤 공정에 사용되는가?")
 submit = st.button("문서 근거로 답변 생성", type="primary", use_container_width=True)
@@ -105,9 +99,6 @@ if st.session_state.history:
                 st.json(meta, expanded=False)
     with st.expander("검색·LLM 원본 응답"):
         st.json(result, expanded=False)
-
-with st.expander("서비스 상태 상세"):
-    st.json(health, expanded=False)
 
 if len(st.session_state.history) > 1:
     with st.expander(f"최근 질의 기록 ({len(st.session_state.history)-1}건)"):
